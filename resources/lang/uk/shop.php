@@ -7,4 +7,5 @@ return [
     'table.owner' => 'Власник',
     'table.open' => 'Вiдчиняется',
     'table.close' => 'Зачиняется',
+    'work_24_hours' => 'Цiлодобово',
 ];

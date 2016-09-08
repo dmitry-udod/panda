@@ -7,11 +7,11 @@
         <div class="mdl-typography--text-center">
             {{ $shops->links() }}
         </div>
-        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp " width="100%">
+        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" width="100%">
             <thead>
             <tr>
                 <th class="mdl-data-table__cell--non-numeric">{{ trans('shop.table.name') }}</th>
-                <th class="mdl-data-table__cell--non-numeric">{{ trans('shop.table.what_do') }}</th>
+{{--                <th class="mdl-data-table__cell--non-numeric">{{ trans('shop.table.what_do') }}</th>--}}
                 <th class="mdl-data-table__cell--non-numeric">{{ trans('shop.table.owner') }}</th>
                 <th class="mdl-data-table__cell--non-numeric">{{ trans('shop.table.address') }}</th>
                 <th class="mdl-data-table__cell--non-numeric">{{ trans('shop.table.open') }}</th>
@@ -21,13 +21,12 @@
             <tbody>
             @foreach($shops as $shop)
             <tr>
-                <?php $data = explode(',', $shop->shop_name_full) ?>
-                <td class="mdl-data-table__cell--non-numeric">{{ $data[0] }}</td>
-                <td class="mdl-data-table__cell--non-numeric">{{ empty($data[1]) ? '' : $data[1] }}</td>
-                <td class="mdl-data-table__cell--non-numeric">{{ empty($data[2]) ? '' : $data[2] }}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{ str_limit($shop->name(), 30) }}</td>
+{{--                <td class="mdl-data-table__cell--non-numeric">{{ empty($data[1]) ? '' : $data[1] }}</td>--}}
+                <td class="mdl-data-table__cell--non-numeric">{{ $shop->owner() }}</td>
                 <td class="mdl-data-table__cell--non-numeric">{{ $shop->address }}</td>
-                <td class="mdl-data-table__cell">{{ $shop->open_at }}</td>
-                <td>{{ $shop->close_at }}</td>
+                <td class="mdl-data-table__cell">{{ $shop->openAt() }}</td>
+                <td>{{ $shop->closeAt() }}</td>
             </tr>
             @endforeach
             </tbody>
