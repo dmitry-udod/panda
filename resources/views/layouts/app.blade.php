@@ -19,7 +19,10 @@
     <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row">
           <span class="android-title mdl-layout-title">
-            {{--<img class="android-logo-image" src="/images/p.png">--}}
+            {{--<a href="/" class="android-link android-link-menu mdl-typography--font-light">--}}
+                {{--<img class="android-logo-image" src="/images/p.png">--}}
+                {{--PANDA.CK.UA--}}
+            {{--</a>--}}
           </span>
             <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
                 <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">

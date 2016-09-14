@@ -14,8 +14,9 @@
 {{--                <th class="mdl-data-table__cell--non-numeric">{{ trans('shop.table.what_do') }}</th>--}}
                 <th class="mdl-data-table__cell--non-numeric">{{ trans('shop.table.owner') }}</th>
                 <th class="mdl-data-table__cell--non-numeric">{{ trans('shop.table.address') }}</th>
-                <th class="mdl-data-table__cell--non-numeric">{{ trans('shop.table.open') }}</th>
-                <th class="mdl-data-table__cell--non-numeric">{{ trans('shop.table.close') }}</th>
+                <th class="">{{ trans('shop.table.open') }}</th>
+                <th class="">{{ trans('shop.table.close') }}</th>
+                <th class=""></th>
             </tr>
             </thead>
             <tbody>
@@ -24,9 +25,12 @@
                 <td class="mdl-data-table__cell--non-numeric">{{ str_limit($shop->name(), 30) }}</td>
 {{--                <td class="mdl-data-table__cell--non-numeric">{{ empty($data[1]) ? '' : $data[1] }}</td>--}}
                 <td class="mdl-data-table__cell--non-numeric">{{ $shop->owner() }}</td>
-                <td class="mdl-data-table__cell--non-numeric">{{ $shop->address }}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{ str_replace('м. ЧЕРКАСИ,', '', $shop->address) }}</td>
                 <td class="mdl-data-table__cell">{{ $shop->openAt() }}</td>
                 <td>{{ $shop->closeAt() }}</td>
+                <td>
+                    <a href="{{ route('shop_details', $shop->id) }}" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--light-green-500" href="">{{ trans('main.details') }}</a>
+                </td>
             </tr>
             @endforeach
             </tbody>
