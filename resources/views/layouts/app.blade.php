@@ -3,8 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="robots" content="index,follow"/>
+    <meta name="application-name" content="Panda.ck.ua" />
+    <meta name="description" content="{{ trans('main.city') }} @yield('meta_description')">
+    <meta name="keywords" content="Panda, {{ trans('main.city') }}, @yield('meta_keywords')"/>
+    <meta name="document-state" content="state"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
     <title>Panda - @yield('title')</title>
 
     <!-- Page styles -->

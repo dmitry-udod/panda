@@ -3,9 +3,15 @@
 namespace App\Providers;
 
 use App\Shop;
+use Illuminate\Database\Eloquent\Model;
 
 class ShopRepository
 {
+    /**
+     * Create shop entity from CSV row
+     *
+     * @param array $data
+     */
     public function saveFromCsv(array $data)
     {
         $shop = Shop::firstOrNew(['shop_name_full' => $data[2]]);
@@ -29,8 +35,24 @@ class ShopRepository
         }
     }
 
+    /**
+     * Get query builder for shops list
+     *
+     * @return Model
+     */
     public function all()
     {
         return Shop::orderBy('created_at', 'DESC');
+    }
+
+    /**
+     * Find shop by id
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function find($id)
+    {
+        return Shop::findOrFail($id);
     }
 }

@@ -577,3 +577,7 @@ ul.pagination {
     vertical-align: top;
     height: 30px;
 }
+
+.details {
+    min-height: 600px
+}

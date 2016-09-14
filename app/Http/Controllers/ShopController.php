@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Providers\ShopRepository;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class ShopController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -18,7 +18,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show shops list
      *
      * @return \Illuminate\Http\Response
      */
@@ -27,5 +27,17 @@ class HomeController extends Controller
         $shops = $this->shop->all()->paginate(50);
 
         return view('welcome', compact('shops'));
+    }
+
+    /**
+     * Show shops list
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $shop = $this->shop->find($id);
+
+        return view('shops.show', compact('shop'));
     }
 }

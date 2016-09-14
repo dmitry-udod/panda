@@ -11,5 +11,5 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-Route::get('/shops/{id}', 'HomeController@index')->name('shop_details');
+Route::get('/', 'ShopController@index');
+Route::get('/shops/{id}', 'ShopController@show')->name('shop_details');

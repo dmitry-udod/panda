@@ -51,4 +51,34 @@ class Shop extends Model
     {
         return empty($this->close_at) ? trans('shop.work_24_hours') : $this->close_at;
     }
+
+    /**
+     * Return shop address without city prefix
+     *
+     * @return string
+     */
+    public function shortAddress()
+    {
+        return str_replace('м. ЧЕРКАСИ,', '', $this->address);
+    }
+
+    /**
+     * Get shop data for seo search keywords
+     *
+     * @return string
+     */
+    public function seo()
+    {
+        return str_replace('"', '', $this->shop_name_full);
+    }
+
+    /**
+     * Get shop short name for seo description
+     *
+     * @return mixed
+     */
+    public function seoName()
+    {
+        return str_replace('"', '', $this->name());
+    }
 }
