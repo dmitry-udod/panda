@@ -604,3 +604,12 @@ ul.pagination {
 .mdl-tooltip--small {
     font-size: 12px;
 }
+
+#languages a svg {
+    margin-right: 10px;
+}
+
+#languages a {
+    text-decoration: none;
+    color: #6ab344;
+}
