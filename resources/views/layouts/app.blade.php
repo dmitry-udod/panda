@@ -21,9 +21,9 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
     <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
-        <div class="mdl-layout__header-row">
+        <div class="mdl-layout__header-row logo-main">
           <span class="android-title mdl-layout-title">
-            <a href="/" class="android-link android-link-menu mdl-typography--font-light">
+            <a href="/" class="android-link android-link-menu mdl-typography--font-light logo-main">
                 <img class="android-logo-image" src="/images/p.png">
                 {{ env('SITE_URL') }}
             </a>

@@ -27,6 +27,9 @@
                     <li>
                         <b>{{ trans('shop.table.close') }}</b>: {{ $shop->closeAt() }}
                     </li>
+                    <li>
+                        <b>{{ trans('main.contacts') }}</b>: {{ $shop->contacts() }}
+                    </li>
                 </ul>
             </div>
             <div class="mdl-cell mdl-cell--6-col">

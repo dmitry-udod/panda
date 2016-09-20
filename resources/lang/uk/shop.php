@@ -3,9 +3,9 @@
 return [
     'table.name' => 'Назва',
     'table.address' => 'Адреса',
-    'table.what_do' => 'Вид дiяльностi',
+    'table.what_do' => 'Вид діяльності',
     'table.owner' => 'Власник',
-    'table.open' => 'Вiдчиняется',
-    'table.close' => 'Зачиняется',
-    'work_24_hours' => 'Цiлодобово',
+    'table.open' => 'Відчиняєтся',
+    'table.close' => 'Зачиняєтся',
+    'work_24_hours' => 'Цілодобово',
 ];

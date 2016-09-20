@@ -93,4 +93,14 @@ class Shop extends Model
     {
         return str_replace('"', '', $this->name());
     }
+
+    /**
+     * Get correct phone number
+     *
+     * @return string
+     */
+    public function contacts()
+    {
+        return strlen($this->contacts) === 9 ? "0" . $this->contacts : $this->contacts;
+    }
 }
