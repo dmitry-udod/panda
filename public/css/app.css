@@ -152,22 +152,12 @@ a img{
 
 .android-drawer .mdl-layout-title {
     position: relative;
-    background: #6ab344;
-    height: 160px;
+    height: 85px;
 }
 
 .android-drawer .android-logo-image {
     position: absolute;
     bottom: 16px;
-}
-
-.android-be-together-section {
-    position: relative;
-    height: 800px;
-    width: auto;
-    background-color: #f3f3f3;
-    background: url('images/slide01.jpg') center 30% no-repeat;
-    background-size: cover;
 }
 
 .logo-font {
@@ -580,4 +570,9 @@ ul.pagination {
 
 .details {
     min-height: 600px
+}
+
+#map {
+    width: 800px;
+    height: 600px;
 }

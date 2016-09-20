@@ -21,6 +21,18 @@ class Shop extends Model
     }
 
     /**
+     * Get short description of what is going on in this place
+     *
+     * @return string
+     */
+    public function whatTodo()
+    {
+        $data = explode(',', $this->shop_name_full);
+
+        return empty($data[1]) ? '' : $data[1];
+    }
+
+    /**
      * Get shop owner
      *
      * @return string
