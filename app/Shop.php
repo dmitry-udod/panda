@@ -51,7 +51,7 @@ class Shop extends Model
      */
     public function openAt()
     {
-        return empty($this->open_at) ? trans('shop.work_24_hours') : $this->open_at;
+        return empty($this->open_at) ? trans('shop.work_24_hours') : str_replace('.', ':', $this->open_at);
     }
 
     /**
@@ -61,7 +61,7 @@ class Shop extends Model
      */
     public function closeAt()
     {
-        return empty($this->close_at) ? trans('shop.work_24_hours') : $this->close_at;
+        return empty($this->close_at) ? trans('shop.work_24_hours') : str_replace('.', ':', $this->close_at);
     }
 
     /**

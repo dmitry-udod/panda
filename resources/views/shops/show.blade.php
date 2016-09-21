@@ -35,12 +35,6 @@
             <div class="mdl-cell mdl-cell--6-col">
                 <div id="map"></div>
             </div>
-            {{--<div class="mdl-card__actions">--}}
-                {{--<a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="" data-upgraded=",MaterialButton">--}}
-                    {{--Make the switch--}}
-                    {{--<i class="material-icons">chevron_right</i>--}}
-                {{--</a>--}}
-            {{--</div>--}}
         </div>
     </div>
 @endsection
