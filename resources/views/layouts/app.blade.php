@@ -12,8 +12,7 @@
     <title>Panda - @yield('title')</title>
 
     <!-- Page styles -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/fonts.css">    
     <link rel="stylesheet" href="/css/material.css">
     <link rel="stylesheet" href="/css/app.css">
 </head>
@@ -44,7 +43,7 @@
             <!-- Navigation -->
             <div class="android-navigation-container">
                 <nav class="android-navigation mdl-navigation">
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase active" href="{{ route('shops')}}">
                         <i class="material-icons green">local_grocery_store</i>{{ trans('main.shops') }}
                     </a>
                 </nav>
@@ -76,7 +75,9 @@
           <img class="android-logo-image" src="/images/p.png">
         </span>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href=""><i class="material-icons green">local_grocery_store</i> {{ trans('main.shops') }}</a>
+            <a class="mdl-navigation__link" href="{{ route('shops')}}">
+              <i class="material-icons green">local_grocery_store</i> {{ trans('main.shops') }}
+            </a>
             <div class="android-drawer-separator"></div>
         </nav>
     </div>

@@ -24,7 +24,7 @@ class ShopController extends Controller
      */
     public function index()
     {
-        $shops = $this->shop->all()->paginate(50);
+        $shops = $this->shop->all()->paginate(20);
 
         return view('welcome', compact('shops'));
     }
