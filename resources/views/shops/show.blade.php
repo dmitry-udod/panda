@@ -4,6 +4,26 @@
 @section('meta_description', '' . trans('main.shops') . ' ' . $shop->seoName())
 @section('meta_keywords', $shop->seo())
 
+@section('json_ld')
+<script type="application/ld+json">
+{
+  	"@context": "http://schema.org",
+  	"@type": "LocalBusiness",
+  	"address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{ trans('main.city')}}",
+    "addressRegion": "{{ trans('main.region')}}",
+    "streetAddress": "{{ $shop->address}}"
+  	},
+  	"description": "{{ trim($shop->whatTodo()) }}",
+  	"name": "{{ $shop->name() }}",
+  	"telephone": "{{ $shop->contacts() }}",
+  	"openingHours": "{{ $shop->openAt() }}-{{ $shop->closeAt() }}"
+
+}
+</script>
+@endsection
+
 @section('content')
     <div class="android-card-container mdl-grid details">
         <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--3dp mdl-grid">

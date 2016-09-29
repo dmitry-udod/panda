@@ -11,8 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
     <title>Panda - @yield('title')</title>
 
+    <!-- Json-ld -->
+    @yield('json_ld')
+
     <!-- Page styles -->
-    <link rel="stylesheet" href="/css/fonts.css">    
+    <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/material.css">
     <link rel="stylesheet" href="/css/app.css">
 </head>
