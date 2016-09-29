@@ -22,7 +22,7 @@ class Language {
      */
     public function handle($request, Closure $next)
     {
-        if ($request->path() === 'sitemap.xml') {
+        if ($request->path() === 'sitemap') {
             return $next($request);
         }
 
