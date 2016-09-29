@@ -56,6 +56,8 @@ class RouteServiceProvider extends ServiceProvider
         $locale = $request->segment(1);
         $this->app->setLocale($locale);
 
+        $locale = $request->path() === 'sitemap.xml' ? '' : $locale;
+        
         Route::group([
             'middleware' => 'web',
             'namespace' => $this->namespace,

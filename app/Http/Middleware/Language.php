@@ -22,6 +22,10 @@ class Language {
      */
     public function handle($request, Closure $next)
     {
+        if ($request->path() === 'sitemap.xml') {
+            return $next($request);
+        }
+
         // Make sure current locale exists.
         $locale = $request->segment(1);
 

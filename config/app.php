@@ -165,6 +165,9 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        // 3-rd party
+        Roumen\Sitemap\SitemapServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
