@@ -18,9 +18,9 @@ class SitemapController extends Controller
       $sitemap->setCache('laravel.sitemap', 600);
 
       if (!$sitemap->isCached()) {
-           $sitemap->add(URL::to('/'), date('Y-m-d H:i:s'), '1.0', 'daily');
-           $sitemap->add(URL::to('/uk'), date('Y-m-d H:i:s'), '1.0', 'daily');
-           $sitemap->add(URL::to('/shops'), date('Y-m-d H:i:s'), '0.9', 'monthly');
+           $sitemap->add(\URL::to('/'), date('Y-m-d H:i:s'), '1.0', 'daily');
+           $sitemap->add(\URL::to('/uk'), date('Y-m-d H:i:s'), '1.0', 'daily');
+           $sitemap->add(\URL::to('/shops'), date('Y-m-d H:i:s'), '0.9', 'monthly');
 
            // add item with translations (url, date, priority, freq, images, title, translations)
           //  $translations = [
@@ -29,7 +29,7 @@ class SitemapController extends Controller
           //                    ['language' => 'bg', 'url' => URL::to('pageBg')],
           //                  ];
           //  $sitemap->add(URL::to('pageEn'), '2015-06-24T14:30:00+02:00', '0.9', 'monthly', [], null, $translations);
-           $shops = App\Shop::orderBy('updated_at', 'desc')->get();
+           $shops = \App\Shop::orderBy('updated_at', 'desc')->get();
 
            foreach ($shops as $shop) {
               $sitemap->add(route('shop_details', $shop->id), $shop->updated_at, '0.8', 'monthly');
