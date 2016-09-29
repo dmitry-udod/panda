@@ -16,4 +16,4 @@ Route::get('/shops', 'ShopController@index')->name('shops');
 Route::get('/shops/{id}', 'ShopController@show')->name('shop_details');
 
 //Sitemap
-Route::get('/sitemap.xml', 'SitemapController@sitemap');
+Route::get('/sitemap', 'SitemapController@sitemap');
