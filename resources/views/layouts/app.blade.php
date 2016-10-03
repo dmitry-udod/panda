@@ -49,7 +49,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <i class="material-icons">search</i>
                 </label>
                 <div class="mdl-textfield__expandable-holder">
-                    <input class="mdl-textfield__input" type="text" id="search-field">
+                    <input class="mdl-textfield__input" type="text" id="search-field" name="q">
                 </div>
             </div>
 
@@ -73,8 +73,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li class="mdl-menu__item">
                     <a href="/uk">@include('flags.uk')Українська</a>
                 </li>
-                <li class="mdl-menu__item">
                     <a href="/en">@include('flags.en')English</a>
+                    <li class="mdl-menu__item">
                 </li>
                 <li class="mdl-menu__item">
                     <a href="/ru">@include('flags.ru')Русский</a>
@@ -102,10 +102,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <!-- Expandable Textfield -->
         <div class="header-search">
-        <form action="#">
+        <form action="" method="get">
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 50%">
-                <input class="mdl-textfield__input" type="text" id="sample3">
-                <label class="mdl-textfield__label" for="sample3">{{ trans('main.search') }}</label>
+                <input class="mdl-textfield__input" type="text" id="q" name="q">
+                <label class="mdl-textfield__label" for="q">{{ trans('main.search') }}</label>
             </div>
         </form>
         </div>

@@ -40,9 +40,18 @@ class ShopRepository
      *
      * @return Model
      */
-    public function all()
+    public function all(array $data = [])
     {
-        return Shop::orderBy('created_at', 'DESC');
+        $shops = Shop::orderBy('created_at', 'DESC');
+
+        if(!empty($data['q'])) {
+            $shops->where(function($q) use ($data) {
+                $q->orWhere('shop_name_full', 'LIKE', "%{$data['q']}%");
+                $q->orWhere('address', 'LIKE', "%{$data['q']}%");
+            });
+        }
+
+        return  $shops;
     }
 
     /**

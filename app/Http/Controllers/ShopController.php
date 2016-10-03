@@ -22,9 +22,9 @@ class ShopController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $shops = $this->shop->all()->paginate(20);
+        $shops = $this->shop->all($request->all())->paginate(20);
 
         return view('welcome', compact('shops'));
     }

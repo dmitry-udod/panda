@@ -2,10 +2,10 @@
 
 return [
     'table.name' => 'Name',
-    'table.address' => 'Адреса',
-    'table.what_do' => 'Вид діяльності',
-    'table.owner' => 'Власник',
-    'table.open' => 'Відчиняєтся',
-    'table.close' => 'Зачиняєтся',
-    'work_24_hours' => 'Цілодобово',
+    'table.address' => 'Address',
+    'table.what_do' => 'What to do',
+    'table.owner' => 'Owner',
+    'table.open' => 'Open At',
+    'table.close' => 'Close AT',
+    'work_24_hours' => '24 hours',
 ];
