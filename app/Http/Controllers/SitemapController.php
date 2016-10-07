@@ -15,7 +15,7 @@ class SitemapController extends Controller
     public function sitemap()
     {
       $sitemap = \App::make("sitemap");
-      $sitemap->setCache('laravel.sitemap', 600);
+      $sitemap->setCache('laravel.sitemap1', 600);
 
       if (!$sitemap->isCached()) {
            $sitemap->add(\URL::to('/'), date('Y-m-d H:i:s'), '1.0', 'daily');
@@ -32,7 +32,9 @@ class SitemapController extends Controller
            $shops = \App\Shop::orderBy('updated_at', 'desc')->get();
 
            foreach ($shops as $shop) {
-              $sitemap->add(route('shop_details', $shop->id), $shop->updated_at, '0.8', 'monthly');
+               $url = route('shop_details', $shop->id);
+               $url = str_replace('/shops', '/uk/shops', $url);
+              $sitemap->add($url, $shop->updated_at, '0.8', 'monthly');
            }
       }
 
